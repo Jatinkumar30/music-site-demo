@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>music</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+
+    <!-- HEADER  -->
+    <header class="page-header">
+      <br>
+  </header>
+
+    <div class="container">
+      <div class="navbar">
+        <ul>
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">ABOUT</a></li>
+          <li><a href="#">SPECIFICATIONS</a></li>
+          <li><a href="#">PRODUCTS</a></li>
+          <!-- <li><a href="#">CONNECT</a></li> -->
+        </ul>
+      </div>
+      <div class="content">
+        <div class="left-col">
+          <h1>Demo <br />Music <br />Website</h1>
+        </div>
+        <div class="right-col">
+          <p>Click on button to play/pause</p>
+          <img src="play.png" id="icon" />
+        </div>
+      </div>
+
+      <!-- footer  -->
+      
+      <footer>
+        <br> <hr>
+        <p>Submitted by : Jatin Kumar<br>
+        <!-- <a href="mailto:Bhanurawal.30@gmail.com">Mail</a></p> -->
+      </footer>
+
+      <!-- AUDIO -->
+
+      <audio id="song">
+        <source src="audio.mp3" type="audio/mp3" />
+      </audio>
+
+      <!-- VIDEO -->
+
+      <video autoplay muted loop id="myVideo">
+        <source src="vid.mp4" type="video/mp4" />
+      </video>
+
+      <script>
+        var song = document.getElementById("song");
+        var icon = document.getElementById("icon");
+        icon.onclick = function () {
+          if (song.paused) {
+            song.play();
+            icon.src = "pause.png";
+          } else {
+            song.pause();
+            icon.src = "play.png";
+          }
+        };
+      </script>
+    </div>
+  </body>
+</html>
